@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import {dataFetch} from './services/DataFetch';
+import CharacterCard from './components/CharacterCard';
+import Filters from './components/Filters';
+import CharacterList from './components/CharacterList';
 
 
 
@@ -48,18 +51,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="app_title">Harry Potter Characters</h1>
-        <input type="text" className="character_search" onChange={this.handleChangeValue}/>
+        <Filters changeValue={this.handleChangeValue}/>
         <ul className="character_list">
           {data
           .filter(item => item.name.toUpperCase().includes(value.toUpperCase()))
           .map(item => 
-            <li className="character_item" key={item.id}>
-              <div className="character_container">
-                <img src={item.image} alt={item.name} className="character_img"/>
-                <h2 className="character_name">{item.name}</h2>
-                <h3 className="character_house">{item.house}</h3>
-              </div>
-            </li>
+            <CharacterList item={item}/>
           )}
         </ul>
        

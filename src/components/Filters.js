@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 class Filters extends React.Component {
     render() {
@@ -7,6 +9,10 @@ class Filters extends React.Component {
             <input type="text" className="character_search" onChange={changeValue}/>
         );
     }
+}
+
+Filters.propTypes = {
+    changeValue: PropTypes.func
 }
 
 export default Filters;

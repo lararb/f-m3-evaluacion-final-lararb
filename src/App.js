@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
 import {dataFetch} from './services/DataFetch';
+import {Switch, Route} from 'react-router-dom';
 import CharacterCard from './components/CharacterCard';
-import Filters from './components/Filters';
 import CharacterList from './components/CharacterList';
+import Filters from './components/Filters';
+
+
 
 
 
@@ -29,7 +32,7 @@ class App extends React.Component {
       dataFetch()
       .then(data => {
         const newData = data.map((item, index) => {
-          return {...item, id: `id-${index}`};
+          return {...item, id: index};
         })
 
         this.setState({
@@ -51,14 +54,21 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="app_title">Harry Potter Characters</h1>
-        <Filters changeValue={this.handleChangeValue}/>
-        <ul className="character_list">
-          {data
-          .filter(item => item.name.toUpperCase().includes(value.toUpperCase()))
-          .map(item => 
-            <CharacterList item={item}/>
-          )}
-        </ul>
+        
+        <Switch>
+          <Route exact path="/" render= { () =>
+            <React.Fragment>
+              <Filters changeValue={this.handleChangeValue}/>
+              <CharacterList data={data} value={value}/>
+            </React.Fragment>
+          }/>
+
+          <Route path="/character/:id" render= {routerProps =>
+            <CharacterCard idparam={routerProps} data={data}/>
+          }/>
+        </Switch>
+        
+        
        
       </div>
     );

@@ -6,7 +6,10 @@ class Filters extends React.Component {
     render() {
         const {changeValue} = this.props;
         return (
-            <input type="text" className="character_search" onChange={changeValue}/>
+            <React.Fragment>
+                <label htmlFor="character_search"></label>
+                <input type="text" name="character_search" className="character_search" onChange={changeValue}/>
+            </React.Fragment>
         );
     }
 }

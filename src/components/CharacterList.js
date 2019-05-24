@@ -13,7 +13,6 @@ class CharacterList extends React.Component {
                 .filter(item => item.name.toUpperCase().includes(value.toUpperCase()))
                 .map(item => 
                     <li className="character_item" key={item.id}>
-                    
                         <img src={item.image} alt={item.name} className="character_img"/>
                         <h2 className="character_name">{item.name}</h2>
                         <h3 className="character_house">{item.house}</h3>

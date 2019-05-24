@@ -51,7 +51,7 @@ class App extends React.Component {
         <input type="text" className="character_search" onChange={this.handleChangeValue}/>
         <ul className="character_list">
           {data
-          .filter(item => item.name.includes(value))
+          .filter(item => item.name.toUpperCase().includes(value.toUpperCase()))
           .map(item => 
             <li className="character_item" key={item.id}>
               <div className="character_container">

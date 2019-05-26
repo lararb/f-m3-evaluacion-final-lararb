@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import './CharacterList.css';
+import './CharacterList.scss';
 
 
 class CharacterList extends React.Component {
     render() {
-        const {data, value, color} = this.props;
+        const {data, value, colorLink} = this.props;
 
         return (
             <ul className="character_list">
@@ -19,7 +19,7 @@ class CharacterList extends React.Component {
                             <h2 className="character_name">{item.name}</h2>
                             <p className="character_house">{item.house}</p>
                         </div>
-                        <Link to={`/character/${item.id}`} className={`character_link ${color(item.house)}`}>{`Salseo sobre ${item.name}`}</Link>
+                        <Link to={`/character/${item.id}`} className={`character_link ${colorLink(item.house)}`}>{`Salseo sobre ${item.name}`}</Link>
                     </li>
                 )}
             </ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import {dataFetch} from './services/DataFetch';
 import {Switch, Route, Link} from 'react-router-dom';
 import CharacterCard from './components/CharacterCard';
@@ -63,6 +63,7 @@ class App extends React.Component {
     }
   }
 
+  
   render() {
     const {data, value} = this.state;
     return (
@@ -71,14 +72,14 @@ class App extends React.Component {
           <Link to="/" className="app_title--link">
             <h1 className="app_title">Harry Potter Characters</h1>
           </Link>
-          <img src={escudos} className="app_img--escudos"></img>
+          <img src={escudos} alt="Escudos de las casas de Hogwarts" className="app_img--escudos"></img>
         </header>
         <main className="app_main">
           <Switch>
             <Route exact path="/" render= { () =>
               <React.Fragment>
                 <Filters changeValue={this.handleChangeValue}/>
-                <CharacterList data={data} value={value} color={this.handleChangeLinkColor}/>
+                <CharacterList data={data} value={value} colorLink={this.handleChangeLinkColor}/>
               </React.Fragment>
             }/>
 

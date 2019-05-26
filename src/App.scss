@@ -1,3 +1,13 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app_header {
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
 .app_title {
     font-family: 'Rock Salt', cursive;
     color: rgb(240, 240, 240);
@@ -11,7 +21,5 @@
 }
 
 .app_img--escudos {
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
+    max-width: 100%;
 }

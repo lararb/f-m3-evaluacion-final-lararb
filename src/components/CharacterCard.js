@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import './CharacterCard.css';
+import './CharacterCard.scss';
 
 
 class CharacterCard extends React.Component {
@@ -18,7 +18,7 @@ class CharacterCard extends React.Component {
                     <div className="character_container">
                     <Link to="/"><i className="fas fa-times-circle"></i></Link>
                         <div className="item_img" style={{backgroundImage:`url(${character.image})`}}></div>
-                        <div className="character_container--info">
+                        <div className={`character_container--info `}>
                             <h2 className="item_name">{character.name}</h2>
                             <ul className="info_list">
                                 <li className="info_item">
@@ -38,7 +38,7 @@ class CharacterCard extends React.Component {
                     </div>
                 
                 :
-                'Loading...'
+                'Esperando a los magos...'
                 }
                 <Link to="/" className="card_link">Volver a investigar personajillos</Link>
                 </div>

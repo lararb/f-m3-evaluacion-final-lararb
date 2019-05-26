@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://vignette.wikia.nocookie.net/harry-potter-media/images/5/50/Wiki-background/revision/latest?cb=20160306133238");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 code {

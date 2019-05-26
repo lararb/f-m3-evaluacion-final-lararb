@@ -8,6 +8,7 @@
 .character_container {
     display: flex;
     background-color: #CAB239;
+    border-radius: 10px;
     width: 600px;
     height: 300px;
     position: relative;
@@ -30,6 +31,7 @@
     background-position: center;
     height: 300px;
     width: 200px;
+    border-radius: 10px;
 }
 
 .item_name {

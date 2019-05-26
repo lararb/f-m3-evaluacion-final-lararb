@@ -1,0 +1,18 @@
+.filters_container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.character_search {
+    margin-left: 20px;
+    background-color: rgb(120, 123, 128);
+    border: 1px solid  rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.character_search--label {
+    font-family: 'Rock Salt', cursive;
+    color: rgb(240, 240, 240);
+}

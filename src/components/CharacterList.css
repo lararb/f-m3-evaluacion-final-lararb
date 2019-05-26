@@ -44,14 +44,17 @@
 
 .character_link {
     text-decoration: none;
-    background-color: #B0321B;
+    background-color: rgb(105, 105, 105);
     border-radius: 30px;
     padding: 10px 15px;
     color: white;
     font-weight: 400;
     max-width: 150px;
-    box-shadow: 1px 1px 1px black;
-    
+    box-shadow: 1px 1px 1px black;    
+}
+
+.character_link:hover {
+    transform: scale(1.1);
 }
 
 .character_img {
@@ -59,4 +62,19 @@
     border-radius: 10px;
 }
 
+.link_red {
+    background-color: #B0321B;
+}
+
+.link_green {
+    background-color: rgb(27, 176, 59);
+}
+
+.link_yellow {
+    background-color: rgb(194, 197, 23);
+}
+
+.link_blue {
+    background-color: rgb(27, 129, 176);
+}
 

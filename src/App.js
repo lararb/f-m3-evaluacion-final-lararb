@@ -50,6 +50,19 @@ class App extends React.Component {
     })
   }
 
+  handleChangeLinkColor(arr) {
+
+    if(arr === 'Gryffindor') {
+      return 'link_red'
+    } else if (arr === 'Slytherin') {
+        return 'link_green'
+    } else if (arr === 'Hufflepuff') {
+        return 'link_yellow'
+    } else if (arr === 'Ravenclaw') {
+        return 'link_blue'
+    }
+  }
+
   render() {
     const {data, value} = this.state;
     return (
@@ -65,7 +78,7 @@ class App extends React.Component {
             <Route exact path="/" render= { () =>
               <React.Fragment>
                 <Filters changeValue={this.handleChangeValue}/>
-                <CharacterList data={data} value={value}/>
+                <CharacterList data={data} value={value} color={this.handleChangeLinkColor}/>
               </React.Fragment>
             }/>
 

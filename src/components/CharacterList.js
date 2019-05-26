@@ -6,7 +6,7 @@ import './CharacterList.css';
 
 class CharacterList extends React.Component {
     render() {
-        const {data, value} = this.props;
+        const {data, value, color} = this.props;
 
         return (
             <ul className="character_list">
@@ -19,11 +19,10 @@ class CharacterList extends React.Component {
                             <h2 className="character_name">{item.name}</h2>
                             <p className="character_house">{item.house}</p>
                         </div>
-                        <Link to={`/character/${item.id}`} className="character_link">{`Salseo sobre ${item.name}`}</Link>
+                        <Link to={`/character/${item.id}`} className={`character_link ${color(item.house)}`}>{`Salseo sobre ${item.name}`}</Link>
                     </li>
                 )}
             </ul>
-            
         );
     }
 }

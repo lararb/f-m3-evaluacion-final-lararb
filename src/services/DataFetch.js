@@ -1,4 +1,4 @@
-const ENDPOINT = 'http://hp-api.herokuapp.com/api/characters';
+const ENDPOINT = 'https://hp-api.herokuapp.com/api/characters';
 
 const dataFetch = () => fetch(ENDPOINT).then(res => res.json())
 

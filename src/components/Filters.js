@@ -18,6 +18,7 @@ class Filters extends React.Component {
                         <option value="Slytherin">Slytherin</option>
                         <option value="Hufflepuff">Hufflepuff</option>
                         <option value="Ravenclaw">Ravenclaw</option>
+                        <option value="Sin casa">Sin casa</option>
                     </select>
                 </div>
            </React.Fragment>

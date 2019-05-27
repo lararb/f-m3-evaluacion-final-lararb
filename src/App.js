@@ -81,8 +81,9 @@ class App extends React.Component {
         <header className="app_header">
           <Link to="/" className="app_title--link">
             <h1 className="app_title">Harry Potter Characters</h1>
+            <img src={escudos} alt="Escudos de las casas de Hogwarts" className="app_img--escudos"></img>
           </Link>
-          <img src={escudos} alt="Escudos de las casas de Hogwarts" className="app_img--escudos"></img>
+          
         </header>
         <main className="app_main">
           <Switch>

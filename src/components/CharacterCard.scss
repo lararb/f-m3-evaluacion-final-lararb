@@ -88,4 +88,9 @@
     background-color: #B0321B;
     border-radius: 30px;
     color: white;
+
+    &:hover {
+        background-color: #CAB239;
+        color: #B0321B;
+    }
 }

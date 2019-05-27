@@ -18,10 +18,12 @@ class App extends React.Component {
 
     this.state = {
       data: [],
-      value: ''
+      value: '',
+      select: ''
     }
 
     this.handleChangeValue = this.handleChangeValue.bind(this);
+    this.handleSelectHouse = this.handleSelectHouse.bind(this);
   }
 
   componentDidMount() {
@@ -63,9 +65,18 @@ class App extends React.Component {
     }
   }
 
+  handleSelectHouse(event) {
+    const currentSelect = event.currentTarget.value;
+
+    this.setState({
+      select: currentSelect
+    })
+
+  }
+
   
   render() {
-    const {data, value} = this.state;
+    const {data, value, select} = this.state;
     return (
       <div className="app">
         <header className="app_header">
@@ -78,8 +89,8 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" render= { () =>
               <React.Fragment>
-                <Filters changeValue={this.handleChangeValue}/>
-                <CharacterList data={data} value={value} colorLink={this.handleChangeLinkColor}/>
+                <Filters changeValue={this.handleChangeValue} changeSelect={this.handleSelectHouse}/>
+                <CharacterList data={data} value={value} colorLink={this.handleChangeLinkColor} select={select}/>
               </React.Fragment>
             }/>
 

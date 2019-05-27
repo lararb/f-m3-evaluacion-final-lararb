@@ -6,11 +6,12 @@ import './CharacterList.scss';
 
 class CharacterList extends React.Component {
     render() {
-        const {data, value, colorLink} = this.props;
+        const {data, value, select, colorLink} = this.props;
 
         return (
             <ul className="character_list">
                 {data
+                .filter(item => item.house.includes(select))
                 .filter(item => item.name.toUpperCase().includes(value.toUpperCase()))
                 .map(item => 
                     <li className="character_item" key={item.id}>

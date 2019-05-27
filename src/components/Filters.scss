@@ -8,13 +8,28 @@
 
 .character_search {
     margin-top: 20px;
-    background-color: rgb(120, 123, 128);
+    background-color: rgb(190, 191, 192);
     border: 1px solid  rgb(240, 240, 240);
     border-radius: 10px;
     padding: 7px;
 }
 
 .character_search--label {
+    font-family: 'Rock Salt', cursive;
+    color: rgb(240, 240, 240);
+    font-size: 14px;
+}
+
+.character_select {
+    margin-top: 20px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid  rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.character_select--label {
+    margin-top: 20px;
     font-family: 'Rock Salt', cursive;
     color: rgb(240, 240, 240);
     font-size: 14px;

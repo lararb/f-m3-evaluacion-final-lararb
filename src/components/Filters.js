@@ -9,8 +9,8 @@ class Filters extends React.Component {
         return (
             <React.Fragment>
                 <div className="filters_container">
-                        <label htmlFor="character_search" className="character_search--label">¡Busca a los personajes más molones!</label>
-                        <input type="text" id="character_search" className="character_search" onChange={changeValue}/>
+                    <label htmlFor="character_search" className="character_search--label">¡Busca a los personajes más molones!</label>
+                    <input type="text" id="character_search" className="character_search" onChange={changeValue}/>
                 </div>
            </React.Fragment>
         );

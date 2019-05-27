@@ -1,11 +1,13 @@
 .filters_container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 30px 0;
+    align-items: center;
+    margin: 50px 0;
 }
 
 .character_search {
-    margin-left: 20px;
+    margin-top: 20px;
     background-color: rgb(120, 123, 128);
     border: 1px solid  rgb(240, 240, 240);
     border-radius: 10px;
@@ -15,4 +17,5 @@
 .character_search--label {
     font-family: 'Rock Salt', cursive;
     color: rgb(240, 240, 240);
+    font-size: 14px;
 }
